@@ -58,6 +58,11 @@ alias '..'='cd ..'
 alias ls="eza --color=auto" # replace ls with eza
 alias k="ls -al"
 
+# Custom overrides
+if [ -f ~/.zshrc.custom ]; then
+  source ~/.zshrc.custom
+fi
+
 # Path variables
 path=("$HOME/bin" "/usr/local/bin" $path)
 
@@ -69,3 +74,4 @@ path+=("$BOB_NVIM_DIR")
 
 export KITTY_DIR="$HOME/.local/kitty.app/bin"
 path+=("$KITTY_DIR")
+
